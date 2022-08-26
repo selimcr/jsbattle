@@ -1,0 +1,29 @@
+{
+  "name": "battletanks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -c-1",
+    "copy:all": "npm run copy:battle && npm run copy:tanklib",
+    "copy:battle": "cpx ./node_modules/jsbattle/dist/public/js/jsbattle.min.js ./src/js",
+    "copy:tanklib": "cpx ./node_modules/jsbattle/dist/public/tanks/lib/tank.js ./src/tanks/lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igloo15/battletanks.git"
+  },
+  "author": "selimcr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igloo15/battletanks/issues"
+  },
+  "homepage": "https://github.com/igloo15/battletanks#readme",
+  "dependencies": {
+    "jsbattle": "^3.5.0"
+  },
+  "devDependencies": {
+    "http-server": "^13.0.1",
+    "cpx": "^1.5.0"
+  }
+}

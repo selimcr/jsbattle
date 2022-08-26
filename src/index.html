@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JsBattle Tutorial</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+    <script type="text/javascript" src="js/jsbattle.min.js"></script>
+    <style>
+      #battlefield {
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 1200px;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="battlefield"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById('battlefield');
+      var renderer = JsBattle.createRenderer('debug');
+      renderer.init(canvas);
+
+      var simulation = JsBattle.createSimulation(renderer);
+      simulation.init(1200, 800);
+
+      const tanks = ['chicken', 'crawler', 'crazy', 'dodge', 'dummy', 'kamikaze', 'sniper', 'test'];
+      tanks.forEach((tank) => {
+        var ai = JsBattle.createAiDefinition();
+        ai.fromFile(tank);
+        simulation.addTank(ai);
+      })
+
+      var startTime;
+      simulation.onStart(() => {
+        startTime = (new Date()).getTime();
+      });
+      simulation.onFinish(() => {
+        const deadTanks = simulation._allTankList.filter((tank) => tank.energy === 0).sort((a, b) => a.score > b.score ? -1 : 1);
+        const aliveTanks = simulation._allTankList.filter((tank) => tank.energy > 0).sort((a, b) => a.score > b.score ? -1 : 1);
+        var stopTime = (new Date()).getTime();
+        var duration = stopTime - startTime;
+        const finalMessage = `THE WINNER IS: ${aliveTanks[0].name}\nBattle Duration: ${duration/1000} seconds.`;
+        alert(finalMessage);
+      });
+      simulation.start();
+    </script>
+  </body>
+</html>

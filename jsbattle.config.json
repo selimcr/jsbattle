@@ -1,0 +1,69 @@
+{
+  "loglevel": "info",
+  "logger": {
+      "type": "Console",
+      "options": {
+          "colors": true,
+          "moduleColors": false,
+          "formatter": "full",
+          "autoPadding": false
+      }
+  },
+  "skipEnv": false,
+  "cluster": {
+    "enabled": true,
+    "name": "jsbattle-cluster",
+    "transporter": {
+      "type": "TCP",
+      "options": {
+        "udpDiscovery": true
+      }
+    }
+  },
+  "data": {
+    "adapter": "nedb",
+    "path": "./jsbattle-data"
+  },
+  "web": {
+    "host": "127.0.0.1",
+    "port": "8080",
+    "baseUrl": "http://localhost:8080",
+    "corsOrigin": ["http://localhost:8080"],
+    "gaCode": ""
+  },
+  "auth": {
+    "admins": [
+      {
+        "provider": "github",
+        "username": "selimcr"
+      }
+    ],
+    "providers": [
+      {
+        "name": "github",
+        "clientID": "XXXXXXXXXXXXXXXXXXXX",
+        "clientSecret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    ]
+  },
+  "league": {
+    "scheduleInterval": 30000,
+    "timeLimit": 20000,
+    "teamSize": 3,
+    "obfuscate": true,
+    "historyDuration": 259200000,
+    "cutOffFightCount": 100,
+    "cutOffWinRatio": 0.05
+
+  },
+  "ubdPlayer": {
+    "queueLimit": 2,
+    "queueQueryTime": 5000,
+    "speed": 1,
+    "timeout": 60000
+  },
+  "battleStore": {
+    "defaultExpireTime": 604800000,
+    "cleanupInterval": 3600000
+  }
+}

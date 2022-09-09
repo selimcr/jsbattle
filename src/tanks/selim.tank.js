@@ -1,1 +1,142 @@
-var _0x13b397=_0x2604;(function(_0x266a2b,_0x4981ec){var _0x22eecd=_0x2604,_0x285596=_0x266a2b();while(!![]){try{var _0x18200e=parseInt(_0x22eecd(0xcd))/0x1+parseInt(_0x22eecd(0xb8))/0x2+parseInt(_0x22eecd(0xc8))/0x3*(parseInt(_0x22eecd(0xc7))/0x4)+-parseInt(_0x22eecd(0xb9))/0x5*(parseInt(_0x22eecd(0xb4))/0x6)+-parseInt(_0x22eecd(0xcf))/0x7+-parseInt(_0x22eecd(0xc5))/0x8+parseInt(_0x22eecd(0xc6))/0x9;if(_0x18200e===_0x4981ec)break;else _0x285596['push'](_0x285596['shift']());}catch(_0x2c69b8){_0x285596['push'](_0x285596['shift']());}}}(_0x507e,0x7e0f2),importScripts(_0x13b397(0xbc)));var bulletMap,avoidDirection;tank['init'](function(_0x2d98d3,_0x1c4157){var _0x13aff1=_0x13b397;_0x2d98d3['SKIN']=_0x13aff1(0xb5),bulletMap=[],changeAvoidDirection();});function changeAvoidDirection(){avoidDirection=Math['random']()>0.5?-0x1:0x1;}function _0x2604(_0x3ffc9e,_0x3045d3){var _0x507e7c=_0x507e();return _0x2604=function(_0x2604f4,_0x3c25b3){_0x2604f4=_0x2604f4-0xb1;var _0x5974d7=_0x507e7c[_0x2604f4];return _0x5974d7;},_0x2604(_0x3ffc9e,_0x3045d3);}tank[_0x13b397(0xb1)](function(_0x4985cd,_0x3d7ed0){var _0x141820=_0x13b397,_0x53f7ae,_0x5584bb,_0x4c3ce2;if(_0x4985cd[_0x141820(0xc3)]['enemy']){var _0x4f2a95=Math['deg']['atan2'](_0x4985cd[_0x141820(0xc3)][_0x141820(0xc0)]['y']-_0x4985cd['y'],_0x4985cd[_0x141820(0xc3)][_0x141820(0xc0)]['x']-_0x4985cd['x']),_0x3419a6=Math['deg'][_0x141820(0xb3)](_0x4f2a95-(_0x4985cd[_0x141820(0xc3)][_0x141820(0xc2)]+_0x4985cd[_0x141820(0xc2)]));_0x3d7ed0['RADAR_TURN']=_0x3419a6*0.2,_0x4c3ce2=Math['deg']['normalize'](_0x4f2a95-0x5a-_0x4985cd['angle']);if(Math[_0x141820(0xbd)](_0x4c3ce2)>0x5a)_0x4c3ce2+=0xb4;_0x3d7ed0[_0x141820(0xb7)]=_0x4c3ce2*0.2;var _0x2027b9=Math[_0x141820(0xbe)][_0x141820(0xb3)](_0x4f2a95-(_0x4985cd[_0x141820(0xc9)][_0x141820(0xc2)]+_0x4985cd[_0x141820(0xc2)]));_0x3d7ed0['GUN_TURN']=_0x2027b9*0.2,_0x3d7ed0[_0x141820(0xc4)]=0.1;}else _0x3d7ed0[_0x141820(0xb7)]=0x0,_0x3d7ed0[_0x141820(0xcb)]=0x1,_0x4c3ce2=0xb4;for(_0x53f7ae in _0x4985cd[_0x141820(0xc3)]['bullets']){_0x5584bb=_0x4985cd[_0x141820(0xc3)][_0x141820(0xca)][_0x53f7ae],_0x5584bb[_0x141820(0xbf)]=0x0,bulletMap[_0x5584bb['id']]=_0x5584bb,_0x5584bb['vx']=_0x5584bb[_0x141820(0xb2)]*Math[_0x141820(0xc1)](_0x5584bb[_0x141820(0xc2)]*(Math['PI']/0xb4)),_0x5584bb['vy']=_0x5584bb[_0x141820(0xb2)]*Math['sin'](_0x5584bb['angle']*(Math['PI']/0xb4)),_0x5584bb[_0x141820(0xce)]=Math[_0x141820(0xcc)](_0x4985cd['x'],_0x4985cd['y'],_0x5584bb['x'],_0x5584bb['y']);}var _0x489066=0x0;for(_0x53f7ae in bulletMap){_0x5584bb=bulletMap[_0x53f7ae];if(!_0x5584bb)continue;if(_0x5584bb[_0x141820(0xbf)]>0x32){bulletMap[_0x53f7ae]=null;continue;}_0x5584bb['age']++,_0x5584bb['x']+=_0x5584bb['vx'],_0x5584bb['y']+=_0x5584bb['vy'];var _0x100a4e=Math[_0x141820(0xcc)](_0x4985cd['x'],_0x4985cd['y'],_0x5584bb['x'],_0x5584bb['y']);_0x5584bb[_0x141820(0xba)]=_0x5584bb[_0x141820(0xce)]-_0x100a4e,_0x5584bb[_0x141820(0xce)]=_0x100a4e;if(_0x5584bb[_0x141820(0xba)]<3.85){bulletMap[_0x53f7ae]=null;continue;}_0x489066++;}_0x489066&&Math[_0x141820(0xbd)](_0x4c3ce2)<0x2d?(_0x3d7ed0['BOOST']=0x1,_0x3d7ed0[_0x141820(0xb6)]=avoidDirection):(_0x3d7ed0[_0x141820(0xbb)]=0x0,_0x3d7ed0[_0x141820(0xb6)]=0x0,changeAvoidDirection());});function _0x507e(){var _0x48d7b4=['cos','angle','radar','SHOOT','5442448LnZsBH','1940121DAMjbm','58276gEqmtJ','192GxuDxG','gun','bullets','RADAR_TURN','distance','787856xyMtYO','tankDistance','916762iggbqz','loop','speed','normalize','544716mGEfvF','forest','THROTTLE','TURN','54542LSSpXX','35QykKDk','approachingSpeed','BOOST','lib/tank.js','abs','deg','age','enemy'];_0x507e=function(){return _0x48d7b4;};return _0x507e();}
+importScripts('lib/tank.js');
+
+const Moving = {
+  East: 0,
+  South: 90,
+  North: -90,
+  West: 180,
+}
+
+const Radar = {
+  Front: 0,
+  Right: 90,
+  Left: -90,
+  Back: 180,
+}
+
+const BulletPower = {
+  None: 0,
+  Min: 0.1,
+  Mid: 0.5,
+  Max: 1,
+}
+
+const Direction = {
+  Right: 1,
+  Left: -1
+}
+
+const Speed = {
+  Slow: 0.5,
+  Fast: 1,
+}
+
+const State = {
+  InFight: 1,
+  Discovering: 0,
+}
+
+const RadarSpeed = {
+  Stop: 0,
+  Fast: 0.5,
+}
+
+let currentControl = {
+  state: State.Discovering,
+  throttle: Speed.Slow,
+  turnTimer: 0,
+  turnDirection: Moving.West,
+  radarSpeed: Radar.Fast,
+  bulletPower: BulletPower.None,
+  gunDirection: 0,
+};
+
+tank.init(function(settings, info) {
+  settings.SKIN = 'lava';
+})
+
+tank.loop(function(state, control) {
+  
+  
+  // when hit an obstacle, start turning until
+  // time of turnTimer doesn't run out
+  if (state.collisions.wall) {
+    currentControl.turnTimer = Math.round(Math.randomRange(20, 50));
+    currentControl.throttle = Speed.Fast;
+    currentControl.turnDirection = Moving.South;
+  } else {
+    // Shoot whenever you see an enemy
+    if (state.radar.enemy) {
+      setAtackMode(state);
+    } else {
+      setDiscoveringMode();
+    }
+  }
+
+  control.THROTTLE = currentControl.throttle;
+  control.RADAR_TURN = currentControl.radarSpeed;
+  control.SHOOT = currentControl.bulletPower;
+  control.TURN = currentControl.turnDirection;
+  control.GUN_TURN = currentControl.gunDirection;
+});
+
+const setAtackMode = (state) => {
+  currentControl.state = State.InFight;
+  //currentControl.radarSpeed = RadarSpeed.Stop;
+
+  // calculate angle of the enemy relating to your tank
+  // this is the angle that you should aim your radar and gun to
+  const enemyAngle = Math.deg.atan2(
+    state.radar.enemy.y - state.y,
+    state.radar.enemy.x - state.x
+  );
+
+  // calculate the difference between current and desired angle
+  // of the radar.
+  const radarAngleDelta = Math.deg.normalize(enemyAngle - (state.radar.angle + state.angle));
+
+  // Turn the radar. If the difference between current and desired
+  // angle is getting smaller, speed of turning will get lower too.
+  // When the difference will be zero, turning will stop.
+  //control.RADAR_TURN = radarAngleDelta * 0.2;
+  currentControl.radarSpeed = radarAngleDelta * 0.2;
+
+  // Turn body of the tank so it is perpendicular to the enemyAngle
+  // it will be easier to dodge bullets by moving back and forth
+  const variableAngle = Math.round(Math.randomRange(70, 110));
+  let bodyAngleDelta = Math.deg.normalize(enemyAngle - variableAngle - state.angle);
+  if(Math.abs(bodyAngleDelta) > 90) bodyAngleDelta += 180;
+  //control.TURN = bodyAngleDelta * 0.2;
+  currentControl.turnDirection = bodyAngleDelta * 0.5;
+
+  // aim your gun at the enemy
+  const gunAngleDelta = Math.deg.normalize(enemyAngle - (state.gun.angle + state.angle));
+  //control.GUN_TURN = gunAngleDelta*0.2;
+  currentControl.gunDirection = gunAngleDelta*0.2;
+
+  // shoot if you have aimed at the enemy
+  //control.SHOOT = 0.1;
+  if (calculateEnemyDistance(state) < 1000) {
+    currentControl.bulletPower = BulletPower.Max;
+  } else {
+    currentControl.bulletPower = BulletPower.Mid;
+  }
+};
+
+const calculateEnemyDistance = (state) => {
+  const minX = Math.min(state.x, state.radar.enemy.x);
+  const maxX = Math.max(state.x, state.radar.enemy.x);
+  const difX = maxX - minX;
+  const minY = Math.min(state.y, state.radar.enemy.y);
+  const maxY = Math.max(state.y, state.radar.enemy.y);
+  const difY = maxY - minY;
+  return difX * difY;
+}
+
+const setDiscoveringMode = () => {
+  currentControl.throttle = Speed.Slow;
+  currentControl.turnDirection = 0.3;
+  currentControl.state = State.Discovering;
+  currentControl.radarSpeed = RadarSpeed.Fast;
+  currentControl.bulletPower = BulletPower.None;
+};
